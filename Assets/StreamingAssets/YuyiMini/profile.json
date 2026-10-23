@@ -1,0 +1,20 @@
+{
+  "characterName": "Yuyi",
+  "modelFile": "character.vrmdata",
+  "heartsEnabled": true,
+  "heartColors": [
+    "#FF6FA8",
+    "#FF9EC4",
+    "#FF4D6D",
+    "#FFC2D9"
+  ],
+  "heartCountMin": 3,
+  "heartCountMax": 5,
+  "heartSize": 1.0,
+  "clickExpression": "happy",
+  "scruffEnabled": true,
+  "useGrabCursor": true,
+  "scruffExpression": "relaxed",
+  "swingStrength": 1.0,
+  "legKick": 1.0
+}

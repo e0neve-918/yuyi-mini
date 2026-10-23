@@ -47,6 +47,16 @@ public class VRMLoader : MonoBehaviour
             PlayerPrefs.DeleteKey(LegacyModelPathKey);
             PlayerPrefs.Save();
         }
+
+        // YUYI MINI: gift builds ship their own character in StreamingAssets/YuyiMini.
+        // Load it whenever nothing else (or a file that no longer exists) is selected.
+        string giftModel = YuyiGiftProfile.BundledModelPath;
+        if (giftModel != null && (string.IsNullOrEmpty(savedPath) || (!IsDLCReference(savedPath) && !File.Exists(savedPath))))
+        {
+            LoadVRM(giftModel);
+            return;
+        }
+
         if (SaveLoadHandler.Instance != null && SaveLoadHandler.Instance.data.enableRandomAvatar)
         {
             TryLoadRandomAvatar();
@@ -466,6 +476,14 @@ public class VRMLoader : MonoBehaviour
 
     public void ActivateDefaultModel()
     {
+        // YUYI MINI: in a gift build the "default" avatar is the bundled character.
+        string giftModel = YuyiGiftProfile.BundledModelPath;
+        if (giftModel != null)
+        {
+            LoadVRM(giftModel);
+            return;
+        }
+
         ClearPreviousCustomModel(skipRawImageCleanup: true);
         EnableMainModel();
 

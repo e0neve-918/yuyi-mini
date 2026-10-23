@@ -75,3 +75,10 @@ Assets/AssetStoreTools*
 Assets/Example Avatar - USED FOR MATE ENGINE
 ProjectSettings/Packages
 UserSettings/Layouts
+
+# YUYI MINI — character models stay out of the public repo
+Gift/**/*.vrm
+Gift/**/*.me
+Assets/StreamingAssets/YuyiMini/character.*
+Assets/YUYI MINI/Generated/
+Assets/YUYI MINI/Generated.meta

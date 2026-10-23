@@ -1,3 +1,20 @@
+# YUYI MINI
+
+MateEngine을 바탕으로 만든 **선물용 데스크톱 SD 캐릭터** 프로그램이에요. 비상업적으로 무료 배포합니다.
+
+- 캐릭터를 **클릭**하면 하트가 뿅뿅
+- 캐릭터를 **꾹 잡으면** 손 커서로 목덜미를 잡혀서 대롱대롱
+- 창·작업표시줄 위에 앉기, 대기 모션 등은 MateEngine 기능 그대로
+
+캐릭터 넣는 법과 빌드 방법은 [`Gift/README.md`](Gift/README.md)를 보세요.
+
+원작: [MateEngine](https://github.com/shinyflvre/Mate-Engine) © 2025 Johnson Jason ("Shiny") — MateEngine Pro License v2.1 ([`LICENSE.md`](LICENSE.md)).
+출처와 변경 내용은 [`CREDITS.md`](CREDITS.md)에 있어요. 이 프로젝트는 MateEngine 공식 프로젝트가 아닙니다.
+
+---
+
+*아래는 원본 MateEngine README입니다.*
+
 # MateEngine for Linux (Unoffical)
 Github: https://github.com/Marksonthegamer/Mate-Engine-Linux-Port
 
