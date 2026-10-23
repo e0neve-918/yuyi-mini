@@ -15,7 +15,7 @@ public class YuyiGiftProfile
 
     [Header("Click hearts")]
     public bool heartsEnabled = true;
-    public string[] heartColors = { "#FF6FA8", "#FF9EC4", "#FF4D6D", "#FFC2D9" };
+    public string[] heartColors = { "#F7B0C6", "#FAC0D2", "#F5A6BE", "#FBCCDC" };
     public int heartCountMin = 3;
     public int heartCountMax = 5;
     public float heartSize = 1f;              // multiplier

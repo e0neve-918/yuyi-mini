@@ -3,10 +3,10 @@
   "modelFile": "character.vrmdata",
   "heartsEnabled": true,
   "heartColors": [
-    "#FF6FA8",
-    "#FF9EC4",
-    "#FF4D6D",
-    "#FFC2D9"
+    "#F7B0C6",
+    "#FAC0D2",
+    "#F5A6BE",
+    "#FBCCDC"
   ],
   "heartCountMin": 3,
   "heartCountMax": 5,
