@@ -35,8 +35,10 @@ public class YuyiInteractionBootstrap : MonoBehaviour
             if (c == null) continue;
             var go = c.gameObject;
             // order matters: the heart click looks up the grab component
+            if (go.GetComponent<YuyiScruffGrab>() != null && go.GetComponent<YuyiHeartClick>() != null) continue;
             if (go.GetComponent<YuyiScruffGrab>() == null) go.AddComponent<YuyiScruffGrab>();
             if (go.GetComponent<YuyiHeartClick>() == null) go.AddComponent<YuyiHeartClick>();
+            Debug.Log($"[YuyiMini] hearts + scruff grab attached to '{go.name}'");
         }
     }
 }

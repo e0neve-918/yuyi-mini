@@ -4,7 +4,9 @@
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public static class YuyiAvatarUtil
 {
@@ -38,8 +40,30 @@ public static class YuyiAvatarUtil
         }
         catch { /* MateEngine internals not ready yet */ }
 
+        // MateEngine keeps invisible full-screen UI around, so "pointer over any UI" is
+        // always true. Only ignore the click when it lands on an actual control.
+        return IsPointerOverInteractiveUI();
+    }
+
+    static readonly List<RaycastResult> uiHits = new List<RaycastResult>();
+
+    static bool IsPointerOverInteractiveUI()
+    {
         var es = EventSystem.current;
-        return es != null && es.IsPointerOverGameObject();
+        if (es == null) return false;
+        try
+        {
+            uiHits.Clear();
+            es.RaycastAll(new PointerEventData(es) { position = Input.mousePosition }, uiHits);
+            foreach (var hit in uiHits)
+            {
+                if (hit.gameObject == null || !hit.gameObject.activeInHierarchy) continue;
+                if (hit.gameObject.GetComponentInParent<Selectable>() != null) return true;
+                if (hit.gameObject.GetComponentInParent<ScrollRect>() != null) return true;
+            }
+        }
+        catch { }
+        return false;
     }
 
     public static Camera FindCamera()

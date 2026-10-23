@@ -70,6 +70,9 @@ public class YuyiHeartClick : MonoBehaviour
             if (!wasGrab && held <= maxClickTime && moved <= maxClickMove && Time.unscaledTime - lastSpawn > cooldown)
             {
                 lastSpawn = Time.unscaledTime;
+#if UNITY_EDITOR
+                Debug.Log("[YuyiMini] click → hearts");
+#endif
                 StartCoroutine(SpawnBurst(Input.mousePosition));
             }
         }

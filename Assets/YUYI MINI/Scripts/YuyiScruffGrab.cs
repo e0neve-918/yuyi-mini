@@ -177,6 +177,9 @@ public class YuyiScruffGrab : MonoBehaviour
         swingVel += Random.Range(-60f, 60f);
         YuyiAvatarUtil.TrySetAnimatorBool(animator, AnimatorParam, true);
         ApplyCursor(true);
+#if UNITY_EDITOR
+        Debug.Log($"[YuyiMini] grabbed (bones ok: {hips != null && neck != null})");
+#endif
     }
 
     void Release()
