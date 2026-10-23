@@ -25,11 +25,12 @@ Gift/
 | `profile.heartColors` | 클릭할 때 나오는 하트 색 (여러 개면 섞여서 나와요) |
 | `profile.heartCountMin` / `heartCountMax` | 한 번 클릭에 나오는 하트 개수 |
 | `profile.heartSize` | 하트 크기 배율 |
+| `profile.tintHearts` | `true`면 heartColors로 물들임, `false`면 heart.png 원래 색 그대로 |
 | `profile.clickExpression` | 클릭했을 때 표정: `happy` `angry` `sad` `relaxed` `surprised` `none` |
 | `profile.scruffExpression` | 목덜미 잡혔을 때 표정 (위와 같은 값) |
 | `profile.swingStrength` | 대롱대롱 흔들림 세기 (0 = 안 흔들림) |
 | `profile.legKick` | 발버둥 세기 (0 = 안 함) |
-| `profile.useGrabCursor` | 잡을 때 손 모양 커서 사용 여부 |
+| `profile.useGrabCursor` | 잡을 때 손 모양 커서 사용 여부 (기본: 안 씀, 평소 마우스 커서 그대로) |
 
 표정은 VRM 모델에 해당 표정(BlendShape/Expression)이 만들어져 있어야 보여요.
 
@@ -48,4 +49,6 @@ Gift/
 `Assets/StreamingAssets/YuyiMini/` 안의 파일을 같은 이름으로 바꾸면 돼요.
 
 - `cursor_grab.png` — 잡을 때 커서 (64×64, 집는 지점이 왼쪽에서 28, 위에서 46 픽셀)
-- `heart.png` — 하트 (흰색/회색으로 그리면 설정한 색으로 물들어요)
+- `heart.png` — 하트 이미지. 배경이 투명한 PNG, 정사각형 권장 (예: 256×256)
+  - 흰색/회색으로 그리면 `heartColors` 색으로 물들어요 (`tintHearts: true`)
+  - 직접 색칠한 하트를 그대로 쓰려면 `tintHearts`를 `false`로 바꾸세요

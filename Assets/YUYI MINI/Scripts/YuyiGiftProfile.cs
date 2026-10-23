@@ -19,11 +19,12 @@ public class YuyiGiftProfile
     public int heartCountMin = 3;
     public int heartCountMax = 5;
     public float heartSize = 1f;              // multiplier
+    public bool tintHearts = true;            // false = show heart.png in its own colors
     public string clickExpression = "happy";  // happy / angry / sad / relaxed / surprised / none
 
     [Header("Scruff grab")]
     public bool scruffEnabled = true;
-    public bool useGrabCursor = true;
+    public bool useGrabCursor = false;       // true = hand cursor while held
     public string scruffExpression = "relaxed";
     public float swingStrength = 1f;          // multiplier
     public float legKick = 1f;                // 0 = no kicking

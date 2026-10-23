@@ -144,7 +144,8 @@ public class YuyiHeartClick : MonoBehaviour
             go.transform.localScale = Vector3.one * s;
 
             float alpha = 1f - Mathf.InverseLerp(0.55f, 1f, n);
-            sr.color = new Color(color.r, color.g, color.b, color.a * alpha);
+            Color tint = YuyiGiftProfile.Current.tintHearts ? color : Color.white;
+            sr.color = new Color(tint.r, tint.g, tint.b, tint.a * alpha);
             sr.sortingOrder = 32000 - index;
 
             yield return null;

@@ -22,9 +22,10 @@
         "heartCountMin": 3,
         "heartCountMax": 5,
         "heartSize": 1.0,
+        "tintHearts": true,
         "clickExpression": "happy",
         "scruffEnabled": true,
-        "useGrabCursor": true,
+        "useGrabCursor": false,
         "scruffExpression": "relaxed",
         "swingStrength": 1.0,
         "legKick": 1.0
@@ -50,9 +51,10 @@
         "heartCountMin": 3,
         "heartCountMax": 5,
         "heartSize": 1.0,
+        "tintHearts": true,
         "clickExpression": "happy",
         "scruffEnabled": true,
-        "useGrabCursor": true,
+        "useGrabCursor": false,
         "scruffExpression": "surprised",
         "swingStrength": 1.0,
         "legKick": 1.0
